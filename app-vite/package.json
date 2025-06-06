@@ -1,0 +1,15 @@
+{
+  "name": "vite-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "watch": "sass --watch ./src/style.scss --no-source-map ../style.css",
+    "build": "sass ./src/style.scss ../style.css --no-source-map --style=expanded"
+  },
+  "devDependencies": {
+    "sass": "^1.88.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  }
+}
