@@ -1,0 +1,47 @@
+
+.main-navs.bp-navs.users-nav,
+.bp-navs.bp-subnavs.user-subnav {
+    box-shadow: 0 0 0 transparent !important;
+    border: 0;
+
+
+    
+
+    .bp-personal-tab {
+        background: transparent;
+        border-bottom: 0;
+
+
+        &.current {
+            a {
+                color: black;
+                font-size: bold;
+                background-color: whitesmoke;
+            }
+        }
+
+        a {
+            color: var(--sp-primary2);
+            font-size: 16px;
+        }
+    }
+
+
+    .bp-personal-sub-tab {
+        background: transparent;
+
+        
+        &.current {
+            a {
+                color: black;
+                font-size: bold;
+                background-color: whitesmoke;
+            }
+        }
+
+        a {
+            color: var(--sp-primary2);
+            font-size: 12px;
+        }
+    }
+}

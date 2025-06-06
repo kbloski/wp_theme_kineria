@@ -9,6 +9,43 @@ Description:    It work only in preview fronted app. Good Life 😁
 License:        GNU General Public License v2 or later
 Tags:           custom, child theme
 */
+.main-navs.bp-navs.users-nav,
+.bp-navs.bp-subnavs.user-subnav {
+  box-shadow: 0 0 0 transparent !important;
+  border: 0;
+}
+.main-navs.bp-navs.users-nav .bp-personal-tab,
+.bp-navs.bp-subnavs.user-subnav .bp-personal-tab {
+  background: transparent;
+  border-bottom: 0;
+}
+.main-navs.bp-navs.users-nav .bp-personal-tab.current a,
+.bp-navs.bp-subnavs.user-subnav .bp-personal-tab.current a {
+  color: black;
+  font-size: bold;
+  background-color: whitesmoke;
+}
+.main-navs.bp-navs.users-nav .bp-personal-tab a,
+.bp-navs.bp-subnavs.user-subnav .bp-personal-tab a {
+  color: var(--sp-primary2);
+  font-size: 16px;
+}
+.main-navs.bp-navs.users-nav .bp-personal-sub-tab,
+.bp-navs.bp-subnavs.user-subnav .bp-personal-sub-tab {
+  background: transparent;
+}
+.main-navs.bp-navs.users-nav .bp-personal-sub-tab.current a,
+.bp-navs.bp-subnavs.user-subnav .bp-personal-sub-tab.current a {
+  color: black;
+  font-size: bold;
+  background-color: whitesmoke;
+}
+.main-navs.bp-navs.users-nav .bp-personal-sub-tab a,
+.bp-navs.bp-subnavs.user-subnav .bp-personal-sub-tab a {
+  color: var(--sp-primary2);
+  font-size: 12px;
+}
+
 /* Colors */
 :root {
   --sp-gradient1: linear-gradient(137deg, var(--sp-primary) 0%, var(--sp-primary2) 100%);
@@ -43,8 +80,4 @@ Tags:           custom, child theme
 
 .theme-columns-area [class*=theme-column-] {
   z-index: revert-layer;
-}
-
-.main-navs.bp-navs.users-nav {
-  box-shadow: 0 0 0 transparent !important;
 }
