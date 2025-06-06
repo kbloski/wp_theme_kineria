@@ -40,3 +40,7 @@ Tags:           custom, child theme
 .post-carousel .post-items:hover .post-date {
   opacity: 0;
 }
+
+.theme-columns-area [class*=theme-column-] {
+  z-index: revert-layer;
+}
