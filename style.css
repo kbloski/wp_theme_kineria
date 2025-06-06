@@ -44,3 +44,7 @@ Tags:           custom, child theme
 .theme-columns-area [class*=theme-column-] {
   z-index: revert-layer;
 }
+
+.main-navs.bp-navs.users-nav {
+  box-shadow: 0 0 0 transparent !important;
+}
