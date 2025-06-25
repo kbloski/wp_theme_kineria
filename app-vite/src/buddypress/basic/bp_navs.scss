@@ -1,0 +1,39 @@
+
+.bp-navs {
+    box-shadow:  0 0 0 transparent !important;
+    border-color: var(--sp-border-dark) !important;
+    border-left: none !important;
+    border-right: none !important;
+
+    li {
+        background: transparent !important;
+        border-bottom: none !important;
+        border-left: 2px solid var(--sp-primary2);
+
+        a {
+            background: transparent;
+            color: var(--sp-primary2);
+
+            .count {
+                aspect-ratio: 1/1;
+                line-height: 1;
+                font-weight: bolder;
+                border-radius: 50% 0 50% 50%;
+                color: black !important;
+            }
+        }
+
+        &.selected {
+            border-left: none !important;
+            
+            a {
+                background: var(--sp-gradient1) !important;
+                color: black !important;
+                font-size: bold;
+            }
+        } 
+        
+ 
+    }
+} 
+

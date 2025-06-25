@@ -9,64 +9,170 @@ Description:    It work only in preview fronted app. Good Life 😁
 License:        GNU General Public License v2 or later
 Tags:           custom, child theme
 */
-.main-navs.bp-navs.users-nav,
-.bp-navs.bp-subnavs.user-subnav {
-  box-shadow: 0 0 0 transparent !important;
-  border: 0;
-}
-.main-navs.bp-navs.users-nav .bp-personal-tab,
-.bp-navs.bp-subnavs.user-subnav .bp-personal-tab {
+.bp-feedback.info {
   background: transparent;
-  border-bottom: 0;
+  border: 2px solid var(--sp-border-dark);
+  color: whitesmoke;
 }
-.main-navs.bp-navs.users-nav .bp-personal-tab.current a,
-.bp-navs.bp-subnavs.user-subnav .bp-personal-tab.current a {
-  color: black;
-  font-size: bold;
-  background-color: whitesmoke;
-}
-.main-navs.bp-navs.users-nav .bp-personal-tab a,
-.bp-navs.bp-subnavs.user-subnav .bp-personal-tab a {
-  color: var(--sp-primary2);
-  font-size: 16px;
-}
-.main-navs.bp-navs.users-nav .bp-personal-sub-tab,
-.bp-navs.bp-subnavs.user-subnav .bp-personal-sub-tab {
-  background: transparent;
-}
-.main-navs.bp-navs.users-nav .bp-personal-sub-tab.current a,
-.bp-navs.bp-subnavs.user-subnav .bp-personal-sub-tab.current a {
-  color: black;
-  font-size: bold;
-  background-color: whitesmoke;
-}
-.main-navs.bp-navs.users-nav .bp-personal-sub-tab a,
-.bp-navs.bp-subnavs.user-subnav .bp-personal-sub-tab a {
-  color: var(--sp-primary2);
-  font-size: 12px;
+.bp-feedback.info .bp-icon {
+  background-color: var(--sp-primary) !important;
 }
 
-/* Colors */
 :root {
   --sp-gradient1: linear-gradient(137deg, var(--sp-primary) 0%, var(--sp-primary2) 100%);
   --sp-gradient2: linear-gradient(-137deg, var(--sp-secondary) 0%, var(--sp-secondary2) 100%);
   --sp-green: #ffffff;
   --sp-white: #ffffff;
-  --sp-primary-light: #fff9f9;
-  --sp-primary: #630060;
-  --sp-primary2: #ef34ef;
-  --sp-secondary: #660058;
-  --sp-secondary2: #010044;
-  --sp-secondary-dark: #101010;
-  --sp-border-dark: #dddddd;
-  --sp-border-light: #e9e9e9;
-  --sp-border-extra-light: #f2f2f2;
-  --sp-scrollbar-thumb: #c2c2c2;
+  --sp-primary-light: #fff5f8; /* bardzo jasny róż */
+  --sp-primary: #8b003f; /* wiśniowy */
+  --sp-primary2: #e21a60; /* malinowy róż / jaśniejszy wiśniowy */
+  --sp-secondary: #5c002f; /* ciemny burgund */
+  --sp-secondary2: #2e0030; /* fioletowo-wiśniowy */
+  --sp-secondary-dark: #1a001a; /* prawie czarny z nutą fioletu */
+  --sp-border-dark: #bb2f5e; /* średni wiśniowy */
+  --sp-border-light: #eeb4c2;
+  --sp-border-extra-light: #f8dde3;
+  --sp-scrollbar-thumb: #b84a6b;
   --sp-font-sans-serif: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --sp-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --sp-shadow: 2px 5px 20px rgba(0, 0, 0, .2);
+  --sp-shadow: 2px 5px 20px rgba(139, 0, 63, 0.2); /* cień wiśniowy */
   --sp-radius: 3px;
   --sp-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+}
+
+.buddypress-wrap button {
+  background: var(--sp-gradient1) !important;
+  border: none !important;
+  padding: 0.5rem 1rem !important;
+  color: white !important;
+}
+
+.select-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-color: var(--sp-border-dark);
+  padding: 0.5rem 1rem;
+}
+.select-wrap select {
+  color: white;
+}
+.select-wrap select * {
+  color: black;
+}
+
+.bp-navs {
+  box-shadow: 0 0 0 transparent !important;
+  border-color: var(--sp-border-dark) !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+.bp-navs li {
+  background: transparent !important;
+  border-bottom: none !important;
+  border-left: 2px solid var(--sp-primary2);
+}
+.bp-navs li a {
+  background: transparent;
+  color: var(--sp-primary2);
+}
+.bp-navs li a .count {
+  aspect-ratio: 1/1;
+  line-height: 1;
+  font-weight: bolder;
+  border-radius: 50% 0 50% 50%;
+  color: black !important;
+}
+.bp-navs li.selected {
+  border-left: none !important;
+}
+.bp-navs li.selected a {
+  background: var(--sp-gradient1) !important;
+  color: black !important;
+  font-size: bold;
+}
+
+.screen-content .subnav-filters.filters .subnav-search .members-search.bp-search form.bp-dir-search-form {
+  border: none !important;
+}
+.screen-content .bp-list.members-list {
+  border-top: 2px solid var(--sp-primary);
+}
+.screen-content .bp-list.members-list li {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+#item-header-avatar a {
+  position: relative;
+  height: 150px;
+  width: 150px;
+}
+#item-header-avatar a img.avatar {
+  position: static;
+  border: none !important;
+  height: 150px;
+  width: 150px;
+}
+#item-header-avatar a::before {
+  --angle: 0deg;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 110%;
+  z-index: -1;
+  background: conic-gradient(from var(--angle), rgba(0, 0, 0, 0.7) 0deg, var(--sp-primary2) 80deg, rgba(0, 0, 0, 0.7) 81deg);
+  animation: spin 10s linear infinite;
+}
+#item-header-avatar a::after {
+  --angle: 0deg;
+  filter: blur(8px);
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 110%;
+  z-index: -1;
+  background: conic-gradient(from var(--angle), rgba(0, 0, 0, 0.7) 0deg, var(--sp-primary2) 80deg, rgba(0, 0, 0, 0.7) 81deg);
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
+.member-header-actions.action > div button, .member-header-actions.action > div a {
+  background: var(--sp-gradient1) !important;
+  border: none !important;
+  padding: 0.5rem 1rem !important;
+  color: white !important;
+}
+
+.item-body .activity-list.item-list.bp-list {
+  border: none;
+  background: transparent;
+}
+.item-body .activity-list.item-list.bp-list .activity-item {
+  background: var(--sp-primary-light);
+  box-shadow: 0 0 4px var(--sp-secondary2);
+  border: none;
+}
+.item-body .activity-list.item-list.bp-list * {
+  background: transparent;
 }
 
 .post-carousel .post-items .post-date {

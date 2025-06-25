@@ -1,0 +1,6 @@
+@mixin button-style {
+    background: var(--sp-gradient1) !important;
+    border: none !important;
+    padding: .5rem 1rem !important;
+    color: white !important;
+}

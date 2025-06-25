@@ -1,0 +1,98 @@
+@use "../../general/" as *;
+
+
+$animationAvatarProfileBuddypresSpeed: 10s;
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+#item-header-avatar a {
+  position: relative;
+    height: 150px;
+    width: 150px;
+
+  img.avatar {
+    position: static;
+    border: none !important;
+    height: 150px;
+    width: 150px;
+  }
+
+  &::before {
+    --angle: 0deg;
+
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 110%;
+    z-index: -1;
+    background: conic-gradient(
+      from var(--angle),
+      rgba(0, 0, 0, 0.7) 0deg,
+      var(--sp-primary2) 80deg,
+      rgba(0, 0, 0, 0.7) 81deg
+    );
+    animation: spin $animationAvatarProfileBuddypresSpeed linear infinite;
+  }
+
+    &::after {
+    --angle: 0deg;
+
+    filter: blur(8px);
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 110%;
+    z-index: -1;
+    background: conic-gradient(
+      from var(--angle),
+      rgba(0, 0, 0, 0.7) 0deg,
+      var(--sp-primary2) 80deg,
+      rgba(0, 0, 0, 0.7) 81deg
+    );
+    animation: spin $animationAvatarProfileBuddypresSpeed linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
+
+.member-header-actions.action > div {
+  button, a {
+    @include button-style();
+  }
+}
+
+// BODY
+.item-body {
+    .activity-list.item-list.bp-list {
+        border: none;
+        background: transparent;
+        
+        .activity-item {
+            background: var(    --sp-primary-light);
+            box-shadow: 0 0 4px var(--sp-secondary2);
+            border: none;
+        }
+
+        * {
+            background: transparent;
+        }
+    }
+
+}

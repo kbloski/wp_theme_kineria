@@ -1,0 +1,12 @@
+.bp-feedback {
+    &.info  {
+        // background-color: var(--sp-secondary2);
+        background: transparent;
+        border: 2px solid var(--sp-border-dark);
+        color: whitesmoke;
+
+        .bp-icon {
+            background-color: var(--sp-primary) !important;
+        }
+    }
+}

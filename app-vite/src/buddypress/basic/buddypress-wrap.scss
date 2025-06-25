@@ -1,0 +1,7 @@
+@use "../../general/" as *;
+
+.buddypress-wrap {
+    button {
+        @include button-style;
+    }
+}
