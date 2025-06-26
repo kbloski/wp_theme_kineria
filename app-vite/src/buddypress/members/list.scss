@@ -1,3 +1,5 @@
+@use "../../general" as *;
+
 .screen-content {
     .subnav-filters.filters {
         .subnav-search {
@@ -16,9 +18,65 @@
         li {
             border-top: 0;
             border-bottom: 0;
+
+             .list-wrap {
+
+                .item  {
+
+                    .item-block {
+                        h2 {
+                           margin-top: 1rem;
+                        }
+    
+                        .members-meta.action{
+                            padding-left: 0;
+
+                            li button[rel="remove"] {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
         }
     
     }
 
+    @media (width > $xs) {
+        .bp-list.members-list {
+        border-top: 2px solid var(--sp-primary);
+    
+        li {
+            border-top: 0;
+            border-bottom: 0;
+
+            .list-wrap {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+                .item  {
+                    display: flex;
+                    justify-items: center;
+                    align-items: center;
+
+                    .item-block {
+                        h2, p {
+                            text-align: left;
+                        }
+
+                        .members-meta.action{
+                            padding-left: 0;
+
+                            li button[rel="remove"] {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+     
+    }
+    }
 }    
 

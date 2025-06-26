@@ -2,7 +2,7 @@
 /*
 Theme Name:     Neom blog child
 Template:       neom-blog
-Version:        1.0.1
+Version:        1.0.2
 Author:         Kamil Błoński
 Author URI:     https://github.com/kbloski
 Description:    It work only in preview fronted app. Good Life 😁
@@ -101,6 +101,42 @@ Tags:           custom, child theme
 .screen-content .bp-list.members-list li {
   border-top: 0;
   border-bottom: 0;
+}
+.screen-content .bp-list.members-list li .list-wrap .item .item-block h2 {
+  margin-top: 1rem;
+}
+.screen-content .bp-list.members-list li .list-wrap .item .item-block .members-meta.action {
+  padding-left: 0;
+}
+.screen-content .bp-list.members-list li .list-wrap .item .item-block .members-meta.action li button[rel=remove] {
+  display: none;
+}
+@media (width > 360px) {
+  .screen-content .bp-list.members-list {
+    border-top: 2px solid var(--sp-primary);
+  }
+  .screen-content .bp-list.members-list li {
+    border-top: 0;
+    border-bottom: 0;
+  }
+  .screen-content .bp-list.members-list li .list-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .screen-content .bp-list.members-list li .list-wrap .item {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+  .screen-content .bp-list.members-list li .list-wrap .item .item-block h2, .screen-content .bp-list.members-list li .list-wrap .item .item-block p {
+    text-align: left;
+  }
+  .screen-content .bp-list.members-list li .list-wrap .item .item-block .members-meta.action {
+    padding-left: 0;
+  }
+  .screen-content .bp-list.members-list li .list-wrap .item .item-block .members-meta.action li button[rel=remove] {
+    display: none;
+  }
 }
 
 @property --angle {
