@@ -12,68 +12,6 @@
 
     }
     
-    .bp-list.members-list {
-        border-top: 2px solid var(--sp-primary);
-    
-        li {
-            border-top: 0;
-            border-bottom: 0;
 
-             .list-wrap {
-                display: flex;
-
-                .item-avatar a img {
-                    max-width: 70px;
-                }
-                
-                .item  {
-                    .item-block {
-                        width: 100%;
-                        display: flex;
-                        justify-items: start;
-                        align-items: center;
-                        flex-wrap: wrap;
-                        margin-left: 1rem;
-
-                        h2 {
-                            margin-top: 2px;
-                        }
-
-                        h2, p {
-                            text-align: left;
-                            width: 100%;
-                        }
-    
-                        .members-meta.action{
-                            padding-left: 0;
-
-                            li button[rel="remove"] {
-                                display: none;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    
-    }
-
-    @media (width > $md) {
-        .bp-list.members-list {
-            border-top: 2px solid var(--sp-primary);
-            display: grid;
-            grid-template-columns: repeat(2, 1fr) ;
-        }
-    }
-
-    @media (width > $lg) { 
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    @media (width > $xl) {
-        .bp-list.members-list {
-            grid-template-columns: repeat(4, 1fr) ;
-        }
-    }
 }    
 

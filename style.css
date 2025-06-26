@@ -2,7 +2,7 @@
 /*
 Theme Name:     Neom blog child
 Template:       neom-blog
-Version:        1.0.2
+Version:        1.0.4
 Author:         Kamil Błoński
 Author URI:     https://github.com/kbloski
 Description:    It work only in preview fronted app. Good Life 😁
@@ -92,23 +92,20 @@ Tags:           custom, child theme
   font-size: bold;
 }
 
-.screen-content .subnav-filters.filters .subnav-search .members-search.bp-search form.bp-dir-search-form {
-  border: none !important;
-}
-.screen-content .bp-list.members-list {
+#members-list {
   border-top: 2px solid var(--sp-primary);
 }
-.screen-content .bp-list.members-list li {
+#members-list li {
   border-top: 0;
   border-bottom: 0;
 }
-.screen-content .bp-list.members-list li .list-wrap {
+#members-list li .list-wrap {
   display: flex;
 }
-.screen-content .bp-list.members-list li .list-wrap .item-avatar a img {
+#members-list li .list-wrap .item-avatar a img {
   max-width: 70px;
 }
-.screen-content .bp-list.members-list li .list-wrap .item .item-block {
+#members-list li .list-wrap .item .item-block {
   width: 100%;
   display: flex;
   justify-items: start;
@@ -116,35 +113,39 @@ Tags:           custom, child theme
   flex-wrap: wrap;
   margin-left: 1rem;
 }
-.screen-content .bp-list.members-list li .list-wrap .item .item-block h2 {
+#members-list li .list-wrap .item .item-block h2 {
   margin-top: 2px;
 }
-.screen-content .bp-list.members-list li .list-wrap .item .item-block h2, .screen-content .bp-list.members-list li .list-wrap .item .item-block p {
+#members-list li .list-wrap .item .item-block h2, #members-list li .list-wrap .item .item-block p {
   text-align: left;
   width: 100%;
 }
-.screen-content .bp-list.members-list li .list-wrap .item .item-block .members-meta.action {
+#members-list li .list-wrap .item .item-block .action {
   padding-left: 0;
 }
-.screen-content .bp-list.members-list li .list-wrap .item .item-block .members-meta.action li button[rel=remove] {
+#members-list li .list-wrap .item .item-block .action li button {
   display: none;
 }
 @media (width > 768px) {
-  .screen-content .bp-list.members-list {
+  #members-list {
     border-top: 2px solid var(--sp-primary);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (width > 992px) {
-  .screen-content {
+  #members-list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (width > 1200px) {
-  .screen-content .bp-list.members-list {
+  #members-list {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+.screen-content .subnav-filters.filters .subnav-search .members-search.bp-search form.bp-dir-search-form {
+  border: none !important;
 }
 
 @property --angle {
