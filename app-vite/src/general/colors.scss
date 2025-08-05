@@ -1,28 +1,40 @@
 :root {
+    /* Gradients */
     --sp-gradient1: linear-gradient(137deg, var(--sp-primary) 0%, var(--sp-primary2) 100%);
     --sp-gradient2: linear-gradient(-137deg, var(--sp-secondary) 0%, var(--sp-secondary2) 100%);
-    
-    --sp-green: #ffffff;
+
+    /* Base Colors */
     --sp-white: #ffffff;
-    --sp-primary-light: #fff5f8; /* bardzo jasny róż */
-    
-    --sp-primary: #8b003f;     /* wiśniowy */
-    --sp-primary2: #e21a60;    /* malinowy róż / jaśniejszy wiśniowy */
-    
-    --sp-secondary: #5c002f;   /* ciemny burgund */
-    --sp-secondary2: #2e0030;  /* fioletowo-wiśniowy */
-    --sp-secondary-dark: #1a001a; /* prawie czarny z nutą fioletu */
+    --sp-black: #0a0a0a;
+    --sp-background: #0c0d14; /* ciemne kinowe tło, granatowo-czarne */
 
-    --sp-border-dark: #bb2f5e; /* średni wiśniowy */
-    --sp-border-light: #eeb4c2;
-    --sp-border-extra-light: #f8dde3;
+    /* Primary – BluViolet */
+    --sp-primary: #5B4FFF;      /* głęboki niebiesko-fioletowy */
+    --sp-primary2: #877FFF;     /* jaśniejszy, pastelowy fiolet */
 
-    --sp-scrollbar-thumb: #b84a6b;
+    /* Secondary – ciemne neutralne tła */
+    --sp-secondary: #1a1c29;
+    --sp-secondary2: #2d3050;
+    --sp-secondary-dark: #121221;
 
-    --sp-font-sans-serif: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --sp-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    /* Borders */
+    --sp-border-dark: #41466d;
+    --sp-border-light: #6c70b2;
+    --sp-border-extra-light: #9c9fe3;
 
-    --sp-shadow: 2px 5px 20px rgba(139, 0, 63, 0.2); /* cień wiśniowy */
-    --sp-radius: 3px;
-    --sp-transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    /* Scrollbar */
+    --sp-scrollbar-thumb: #5B4FFF;
+
+    /* Typography */
+    --sp-font-sans-serif: "Inter", "Poppins", "Segoe UI", Roboto, sans-serif;
+    --sp-font-serif: "Playfair Display", Georgia, serif;
+
+    /* Effects */
+    --sp-shadow: 0 10px 30px rgba(91, 79, 255, 0.2);
+    --sp-radius: 6px;
+    --sp-transition: all 0.3s ease-in-out;
+
+    /* Accent light */
+    --sp-primary-light: #e4e7ff; /* bardzo jasny błękitny fiolet */
+    --sp-accent: #9a9cff;        /* dodatkowy akcent */
 }
