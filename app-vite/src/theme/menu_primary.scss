@@ -1,17 +1,28 @@
 @use "../general/" as *;
 
 .mobile-menu {
+    .dropdown > span > button {
+        border-left: none;
+    }
 
     .header-close-menu {
 
     }
 
     ul.menu-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+
         li {
             border: none !important;
         }
 
         li.menu-item {
+            a.nav-link {
+                background: var(--sp-secondary2);
+            }
+
             span.mobile-toggler {
                 max-width: none;
                 position: absolute;
@@ -28,6 +39,7 @@
             // Toggle list active
             &.current {
                 a.nav-link {
+                    background: transparent;
                     z-index: 1;
                     color: var(--sp-primary-light);
                     // text-align: center;

@@ -231,8 +231,19 @@ Tags:           custom, child theme
   background: transparent;
 }
 
+.mobile-menu .dropdown > span > button {
+  border-left: none;
+}
+.mobile-menu ul.menu-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
 .mobile-menu ul.menu-wrap li {
   border: none !important;
+}
+.mobile-menu ul.menu-wrap li.menu-item a.nav-link {
+  background: var(--sp-secondary2);
 }
 .mobile-menu ul.menu-wrap li.menu-item span.mobile-toggler {
   max-width: none;
@@ -245,6 +256,7 @@ Tags:           custom, child theme
   padding-right: 1rem;
 }
 .mobile-menu ul.menu-wrap li.menu-item.current a.nav-link {
+  background: transparent;
   z-index: 1;
   color: var(--sp-primary-light);
   margin-left: 3rem;
