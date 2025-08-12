@@ -1,11 +1,16 @@
 @use "../general/" as *;
 
 .mobile-menu {
+
     .header-close-menu {
 
     }
 
-    .menu-wrap {
+    ul.menu-wrap {
+        li {
+            border: none !important;
+        }
+
         li.menu-item {
             span.mobile-toggler {
                 max-width: none;
@@ -25,12 +30,13 @@
                 a.nav-link {
                     z-index: 1;
                     color: var(--sp-primary-light);
-                    text-align: center;
+                    // text-align: center;
+                    margin-left: 3rem;
                     pointer-events: none;
                 }
 
                 span.mobile-toggler { 
-                    background: var(--sp-gradient2) !important;
+                    background: var(--sp-gradient1) !important;
                     color: var(--sp-primary-light);
 
                 }
