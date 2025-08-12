@@ -1,0 +1,42 @@
+@use "../general/" as *;
+
+.mobile-menu {
+    .header-close-menu {
+
+    }
+
+    .menu-wrap {
+        li.menu-item {
+            span.mobile-toggler {
+                max-width: none;
+                position: absolute;
+                width: 100%;
+                // opacity: 0;
+                text-align: right;
+        
+                button {
+                    justify-content: end;
+                    padding-right: 1rem;
+                }
+            }
+
+            // Toggle list active
+            &.current {
+                a.nav-link {
+                    z-index: 1;
+                    color: var(--sp-primary-light);
+                    text-align: center;
+                    pointer-events: none;
+                }
+
+                span.mobile-toggler { 
+                    background: var(--sp-gradient2) !important;
+                    color: var(--sp-primary-light);
+
+                }
+            }
+
+        }
+
+    }
+}
