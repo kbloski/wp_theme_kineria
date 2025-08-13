@@ -267,6 +267,14 @@ Tags:           custom, child theme
   color: var(--sp-primary-light);
 }
 
+button,
+button:hover,
+button:focus-visible,
+button:active,
+button:focus {
+  outline: none !important; /* tylko na hover, focus zostaje */
+}
+
 .post-carousel .post-items .post-date {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
