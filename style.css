@@ -22,16 +22,9 @@ Tags:           custom, child theme
   /* Gradients – bardziej głębokie i dramatyczne */
   --sp-gradient1: linear-gradient(137deg, var(--sp-primary) 0%, var(--sp-primary2) 100%);
   --sp-gradient2: linear-gradient(-137deg, var(--sp-secondary) 0%, var(--sp-secondary2) 100%);
-  /* Base Colors */
   /* Primary – kinowy neonowy fiolet z nutą błękitu */
   --sp-primary: var(--ast-global-color-0, #5d3bff);
   --sp-primary2: var(--ast-global-color-0, #5d3bff);
-  /* Secondary – ciemne tła i panele */
-  /* Borders – dyskretne, kinowe refleksy */
-  /* Scrollbar – neonowy akcent */
-  /* Typography */
-  /* Effects */
-  /* Accent light – inspiracja światłami w kinie */
 }
 
 @keyframes expandHeight {
@@ -89,8 +82,15 @@ Tags:           custom, child theme
   font-size: bold;
 }
 
+.screen-content .subnav-filters.filters .subnav-search .members-search.bp-search form.bp-dir-search-form {
+  border: none !important;
+}
+
 #members-list {
   border-top: 2px solid var(--sp-primary);
+}
+#members-list.item-list.members-list.bp-list::before {
+  display: none;
 }
 #members-list li {
   border-top: 0;
@@ -103,7 +103,6 @@ Tags:           custom, child theme
   max-width: 70px;
 }
 #members-list li .list-wrap .item .item-block {
-  width: 100%;
   display: flex;
   justify-items: start;
   align-items: center;
@@ -135,14 +134,9 @@ Tags:           custom, child theme
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (width > 1200px) {
-  #members-list {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
-.screen-content .subnav-filters.filters .subnav-search .members-search.bp-search form.bp-dir-search-form {
-  border: none !important;
+input#dir-members-search {
+  color: white !important;
 }
 
 @property --angle {
