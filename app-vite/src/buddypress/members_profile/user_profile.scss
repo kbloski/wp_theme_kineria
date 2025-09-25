@@ -74,7 +74,7 @@ $animationAvatarProfileBuddypresSpeed: 10s;
 
 .member-header-actions.action > div {
   button, a {
-    @include button-style();
+    // @include button-style();
   }
 }
 

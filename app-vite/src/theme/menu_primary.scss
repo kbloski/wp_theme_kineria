@@ -1,60 +1,53 @@
 @use "../general/" as *;
 
-.mobile-menu {
-    .dropdown > span > button {
-        border-left: none;
-    }
 
-    .header-close-menu {
-
-    }
-
-    ul.menu-wrap {
-        display: flex;
+@media (width < $lg)
+{
+    ul.main-header-menu{
+        background: transparent !important;
+        min-height: 100vh !important;
         flex-direction: column;
-        gap: .3rem;
-
-        li {
-            border: none !important;
-        }
-
+    
         li.menu-item {
-            a.nav-link {
-                background: var(--sp-secondary2);
-            }
-
-            span.mobile-toggler {
-                max-width: none;
+            background: transparent !important;
+            width: unset !important;
+    
+            button.ast-menu-toggle {
                 position: absolute;
+                left: 0;
+                top: 0;
                 width: 100%;
-                // opacity: 0;
-                text-align: right;
-        
-                button {
-                    justify-content: end;
-                    padding-right: 1rem;
+                height: 100%;
+                color: transparent !important;
+            }
+    
+            a.menu-link {
+                border: 2px solid white;
+                background-color: transparent !important;
+            }
+
+    
+            ul.sub-menu {
+                li.menu-item {
+                    a.menu-link {
+                        border: none !important;
+
+                        span.ast-icon {
+                            display: none !important;
+                        }   
+                    }
                 }
             }
 
-            // Toggle list active
-            &.current {
-                a.nav-link {
-                    background: transparent;
-                    z-index: 1;
-                    color: var(--sp-primary-light);
-                    // text-align: center;
-                    margin-left: 3rem;
-                    pointer-events: none;
-                }
 
-                span.mobile-toggler { 
-                    background: var(--sp-gradient1) !important;
-                    color: var(--sp-primary-light);
+ 
+            &.ast-submenu-expanded {
+                ul.sub-menu {
+                    animation: expandHeight 3s forwards;
 
+                    opacity: 1;
                 }
             }
-
         }
-
     }
 }

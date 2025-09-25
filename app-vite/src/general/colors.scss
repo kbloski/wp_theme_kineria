@@ -4,37 +4,37 @@
     --sp-gradient2: linear-gradient(-137deg, var(--sp-secondary) 0%, var(--sp-secondary2) 100%);
 
     /* Base Colors */
-    --sp-white: #ffffff;
-    --sp-black: #000000;
-    --sp-background: #0a0a12; /* prawie czarne tło z odrobiną fioletu */
+    // --sp-white: #ffffff;
+    // --sp-black: #000000;
+    // --sp-background: #0a0a12; /* prawie czarne tło z odrobiną fioletu */
 
     /* Primary – kinowy neonowy fiolet z nutą błękitu */
-    --sp-primary: #5d3bff;       /* głęboki neonowy fiolet */
-    --sp-primary2: #8c6bff;      /* jaśniejszy do efektów i gradientów */
-
+    --sp-primary: var(--ast-global-color-0, #5d3bff);      
+    --sp-primary2: var(--ast-global-color-0, #5d3bff);      
+ 
     /* Secondary – ciemne tła i panele */
-    --sp-secondary: #141429;     /* głęboki granat */
-    --sp-secondary2: #1d1d3f;    /* jaśniejszy odcień paneli */
-    --sp-secondary-dark: #0b0b1a;
-
+    // --sp-secondary: #141429;      /* głęboki granat */
+    // --sp-secondary2: #1d1d3f;    /* jaśniejszy odcień paneli */
+    // --sp-secondary-dark: #0b0b1a;
+// 
     /* Borders – dyskretne, kinowe refleksy */
-    --sp-border-dark: #2f2f55;
-    --sp-border-light: #5a58a0;
-    --sp-border-extra-light: #9a96ff;
+    // --sp-border-dark: #2f2f55;
+    // --sp-border-light: #5a58a0;
+    // --sp-border-extra-light: #9a96ff;
 
     /* Scrollbar – neonowy akcent */
-    --sp-scrollbar-thumb: #7b61ff;
+    // --sp-scrollbar-thumb: #7b61ff;
 
     /* Typography */
-    --sp-font-sans-serif: "Inter", "Poppins", "Segoe UI", Roboto, sans-serif;
-    --sp-font-serif: "Playfair Display", Georgia, serif;
+    // --sp-font-sans-serif: "Inter", "Poppins", "Segoe UI", Roboto, sans-serif;
+    // --sp-font-serif: "Playfair Display", Georgia, serif;
 
     /* Effects */
-    --sp-shadow: 0 10px 40px rgba(93, 59, 255, 0.35);
-    --sp-radius: 8px;
-    --sp-transition: all 0.3s ease-in-out;
+    // --sp-shadow: 0 10px 40px rgba(93, 59, 255, 0.35);
+    // --sp-radius: 8px;
+    // --sp-transition: all 0.3s ease-in-out;
 
     /* Accent light – inspiracja światłami w kinie */
-    --sp-primary-light: #e8e4ff; /* jasny lawendowy glow */
-    --sp-accent: #ff3366;        /* neonowy róż jako efekt WOW */
+    // --sp-primary-light: #e8e4ff; /* jasny lawendowy glow */
+    // --sp-accent: #ff3366;        /* neonowy róż jako efekt WOW */
 }

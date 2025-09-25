@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*
-Theme Name:     Neom blog child
-Template:       neom-blog
-Version:        1.0.52
+Theme Name:     Astra child
+Template:       astra
+Version:        0.0.1
 Author:         Kamil Błoński
 Author URI:     https://github.com/kbloski
 Description:    It work only in preview fronted app. Good Life 😁
@@ -23,41 +23,27 @@ Tags:           custom, child theme
   --sp-gradient1: linear-gradient(137deg, var(--sp-primary) 0%, var(--sp-primary2) 100%);
   --sp-gradient2: linear-gradient(-137deg, var(--sp-secondary) 0%, var(--sp-secondary2) 100%);
   /* Base Colors */
-  --sp-white: #ffffff;
-  --sp-black: #000000;
-  --sp-background: #0a0a12; /* prawie czarne tło z odrobiną fioletu */
   /* Primary – kinowy neonowy fiolet z nutą błękitu */
-  --sp-primary: #5d3bff; /* głęboki neonowy fiolet */
-  --sp-primary2: #8c6bff; /* jaśniejszy do efektów i gradientów */
+  --sp-primary: var(--ast-global-color-0, #5d3bff);
+  --sp-primary2: var(--ast-global-color-0, #5d3bff);
   /* Secondary – ciemne tła i panele */
-  --sp-secondary: #141429; /* głęboki granat */
-  --sp-secondary2: #1d1d3f; /* jaśniejszy odcień paneli */
-  --sp-secondary-dark: #0b0b1a;
   /* Borders – dyskretne, kinowe refleksy */
-  --sp-border-dark: #2f2f55;
-  --sp-border-light: #5a58a0;
-  --sp-border-extra-light: #9a96ff;
   /* Scrollbar – neonowy akcent */
-  --sp-scrollbar-thumb: #7b61ff;
   /* Typography */
-  --sp-font-sans-serif: "Inter", "Poppins", "Segoe UI", Roboto, sans-serif;
-  --sp-font-serif: "Playfair Display", Georgia, serif;
   /* Effects */
-  --sp-shadow: 0 10px 40px rgba(93, 59, 255, 0.35);
-  --sp-radius: 8px;
-  --sp-transition: all 0.3s ease-in-out;
   /* Accent light – inspiracja światłami w kinie */
-  --sp-primary-light: #e8e4ff; /* jasny lawendowy glow */
-  --sp-accent: #ff3366; /* neonowy róż jako efekt WOW */
 }
 
-.buddypress-wrap button {
-  background: var(--sp-gradient1) !important;
-  border: none !important;
-  padding: 0.5rem 1rem !important;
-  color: white !important;
+@keyframes expandHeight {
+  0% {
+    max-height: 0;
+    overflow: hidden;
+  }
+  100% {
+    max-height: 2048px;
+    overflow: hidden;
+  }
 }
-
 .select-wrap {
   display: flex;
   justify-content: space-between;
@@ -211,13 +197,6 @@ Tags:           custom, child theme
     --angle: 360deg;
   }
 }
-.member-header-actions.action > div button, .member-header-actions.action > div a {
-  background: var(--sp-gradient1) !important;
-  border: none !important;
-  padding: 0.5rem 1rem !important;
-  color: white !important;
-}
-
 .item-body .activity-list.item-list.bp-list {
   border: none;
   background: transparent;
@@ -231,42 +210,39 @@ Tags:           custom, child theme
   background: transparent;
 }
 
-.mobile-menu .dropdown > span > button {
-  border-left: none;
+@media (width < 992px) {
+  ul.main-header-menu {
+    background: transparent !important;
+    min-height: 100vh !important;
+    flex-direction: column;
+  }
+  ul.main-header-menu li.menu-item {
+    background: transparent !important;
+    width: unset !important;
+  }
+  ul.main-header-menu li.menu-item button.ast-menu-toggle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent !important;
+  }
+  ul.main-header-menu li.menu-item a.menu-link {
+    border: 2px solid white;
+    background-color: transparent !important;
+  }
+  ul.main-header-menu li.menu-item ul.sub-menu li.menu-item a.menu-link {
+    border: none !important;
+  }
+  ul.main-header-menu li.menu-item ul.sub-menu li.menu-item a.menu-link span.ast-icon {
+    display: none !important;
+  }
+  ul.main-header-menu li.menu-item.ast-submenu-expanded ul.sub-menu {
+    animation: expandHeight 3s forwards;
+    opacity: 1;
+  }
 }
-.mobile-menu ul.menu-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-.mobile-menu ul.menu-wrap li {
-  border: none !important;
-}
-.mobile-menu ul.menu-wrap li.menu-item a.nav-link {
-  background: var(--sp-secondary2);
-}
-.mobile-menu ul.menu-wrap li.menu-item span.mobile-toggler {
-  max-width: none;
-  position: absolute;
-  width: 100%;
-  text-align: right;
-}
-.mobile-menu ul.menu-wrap li.menu-item span.mobile-toggler button {
-  justify-content: end;
-  padding-right: 1rem;
-}
-.mobile-menu ul.menu-wrap li.menu-item.current a.nav-link {
-  background: transparent;
-  z-index: 1;
-  color: var(--sp-primary-light);
-  margin-left: 3rem;
-  pointer-events: none;
-}
-.mobile-menu ul.menu-wrap li.menu-item.current span.mobile-toggler {
-  background: var(--sp-gradient1) !important;
-  color: var(--sp-primary-light);
-}
-
 button,
 button:hover,
 button:focus-visible,
