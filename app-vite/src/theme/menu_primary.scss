@@ -1,11 +1,11 @@
 @use "../general/" as *;
 
 
-@media (width < $lg)
+@media (width < $md)
 {
     ul.main-header-menu{
         background: transparent !important;
-        min-height: 100vh !important;
+        // min-height: 100vh !important;
         flex-direction: column;
     
         li.menu-item {

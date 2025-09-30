@@ -1,0 +1,17 @@
+ul.products {
+    li.product.type-product {
+        flex-shrink: 1;
+        justify-content: space-between;
+
+        .astra-shop-thumbnail-wrap {
+            span {
+                bottom: 50%;
+                transform: translateY(50%);
+            }
+        }
+
+
+    
+    }
+}
+ 

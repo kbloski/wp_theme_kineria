@@ -2,7 +2,7 @@
 /*
 Theme Name:     Astra child
 Template:       astra
-Version:        0.0.1
+Version:        0.0.11
 Author:         Kamil Błoński
 Author URI:     https://github.com/kbloski
 Description:    It work only in preview fronted app. Good Life 😁
@@ -204,10 +204,9 @@ input#dir-members-search {
   background: transparent;
 }
 
-@media (width < 992px) {
+@media (width < 768px) {
   ul.main-header-menu {
     background: transparent !important;
-    min-height: 100vh !important;
     flex-direction: column;
   }
   ul.main-header-menu li.menu-item {
@@ -243,6 +242,15 @@ button:focus-visible,
 button:active,
 button:focus {
   outline: none !important; /* tylko na hover, focus zostaje */
+}
+
+ul.products li.product.type-product {
+  flex-shrink: 1;
+  justify-content: space-between;
+}
+ul.products li.product.type-product .astra-shop-thumbnail-wrap span {
+  bottom: 50%;
+  transform: translateY(50%);
 }
 
 .post-carousel .post-items .post-date {
