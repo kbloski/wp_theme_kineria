@@ -2,7 +2,7 @@
 /*
 Theme Name:     Astra child
 Template:       astra
-Version:        0.0.111
+Version:        0.0.112
 Author:         Kamil Błoński
 Author URI:     https://github.com/kbloski
 Description:    It work only in preview fronted app. Good Life 😁
@@ -251,6 +251,10 @@ ul.products li.product.type-product {
 ul.products li.product.type-product .button {
   width: 100%;
   text-align: center;
+}
+
+.woocommerce-no-available-payment-methods-message {
+  display: none;
 }
 
 .post-carousel .post-items .post-date {
