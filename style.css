@@ -2,7 +2,7 @@
 /*
 Theme Name:     Astra child
 Template:       astra
-Version:        0.0.11
+Version:        0.0.111
 Author:         Kamil Błoński
 Author URI:     https://github.com/kbloski
 Description:    It work only in preview fronted app. Good Life 😁
@@ -248,11 +248,6 @@ ul.products li.product.type-product {
   flex-shrink: 1;
   justify-content: space-between;
 }
-ul.products li.product.type-product .astra-shop-thumbnail-wrap span {
-  bottom: 50%;
-  transform: translateY(50%);
-}
-
 .post-carousel .post-items .post-date {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;

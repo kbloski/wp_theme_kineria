@@ -5,8 +5,11 @@ ul.products {
 
         .astra-shop-thumbnail-wrap {
             span {
-                bottom: 50%;
-                transform: translateY(50%);
+                // top: unset !important;
+                // bottom: unset !important;
+                // bottom: 50%;
+                // display: block;
+                // transform: translateY(-50%);
             }
         }
 
