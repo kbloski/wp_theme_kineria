@@ -248,6 +248,11 @@ ul.products li.product.type-product {
   flex-shrink: 1;
   justify-content: space-between;
 }
+ul.products li.product.type-product .button {
+  width: 100%;
+  text-align: center;
+}
+
 .post-carousel .post-items .post-date {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;

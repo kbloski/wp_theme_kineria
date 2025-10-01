@@ -4,6 +4,8 @@ ul.products {
         justify-content: space-between;
 
         .astra-shop-thumbnail-wrap {
+         
+
             span {
                 // top: unset !important;
                 // bottom: unset !important;
@@ -13,8 +15,10 @@ ul.products {
             }
         }
 
-
-    
+        .button {
+            width: 100%;
+            text-align: center;
+        }
     }
 }
  
